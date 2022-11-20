@@ -5,38 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpottedWebs</title>
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <div class="corner-decor">
-        <span class="top-left"></span>
-        <span class="top-right"></span>
-    </div>
-    <nav>
-        <span id="site-title">SPOTTEDWEBS</span>
-        <ul id="links">
-            <li>
-                <a href="https://www.linkedin.com/in/louismunozdiaz/">LinkedIn</a>
-            </li>
-            <li>
-                <a href="https://github.com/louismunozdiaz?tab=repositories">GitHub</a>
-            </li>
-            <li>
-                <a href="https://twitter.com/louismdiaz">Twitter</a>
-            </li>
-        </ul>
-    </nav>
-    <div id="gallery"></div>
-    <footer>
-        <span id="signature">Louis Diaz</span>
-    </footer>
-    <div class="corner-decor">
-        <span class="bottom-left"></span>
-        <span class="bottom-right"></span>
-    </div>
-    <script src="scripts/index.js"></script>
+    <picture>
+        <source srcset="images/hero.webp 1x, images/hero@2x.webp 2x" type="image/webp">
+        <source srcset="images/hero.png 1x, images/hero@2x.webp 2x" type="image/webp">
+        <img class="hero__image" src="images/hero-desktop.png" alt="the website hero image">
+    </picture>
+    <div id="gallery"></div>>
+    </div> -->
+    <script type="module" src="./scripts/index.js"></script>
 </body>
 
 </html>
