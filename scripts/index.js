@@ -24,13 +24,16 @@ for (let photo of photos) {
  */
 function createFigure() {
     // class names
-    const galleryPhoto = 'gallery__photo';
     const galleryCaption = 'gallery__caption';
     const galleryCaptionShadow = 'gallery__caption--shadow';
+    const galleryCaptionWhite = 'gallery__caption--white';
+    const galleryFigure = 'gallery__figure';
+    const galleryPhoto = 'gallery__photo';
 
     // construct the figure!
 
     const figure = document.createElement('figure');
+    figure.classList.add(galleryFigure);
 
     // create the img element
     const image = document.createElement('img');
@@ -38,7 +41,7 @@ function createFigure() {
     
     // create the figcaption element
     const figcaption = document.createElement('figcaption');
-    figcaption.classList.add(galleryCaption, galleryCaptionShadow);
+    figcaption.classList.add(galleryCaption, galleryCaptionShadow, galleryCaptionWhite);
 
     // attach the img and figcaption to the figure
     figure.appendChild(image);
