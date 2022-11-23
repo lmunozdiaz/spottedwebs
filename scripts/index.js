@@ -1,52 +1,18 @@
 import photos from './photos.js';
+import makeFigure from './figure.js';
 
 // get the gallery container from the DOM
 const gallery = document.querySelector('#gallery');
 
 // for each photo create a figure element
 for (let photo of photos) {
-    const galleryFigure = createFigure();
+    const figure = makeFigure();
 
-    const figureImageElement = galleryFigure.querySelector('img');
-    figureImageElement.setAttribute('src', photo.url);
+    const image = figure.querySelector('img');
+    image.setAttribute('src', photo.url);
 
-    const figureCaptionElement = galleryFigure.querySelector('figcaption');
-    figureCaptionElement.innerHTML = photo.id;
+    const caption = figure.querySelector('figcaption');
+    caption.innerHTML = photo.id;
 
-    // add the new figure to the DOM
-    gallery.appendChild(galleryFigure);
-}
-
-/**
- * 
- * @returns A prepared figure containing an img and figcaption element,
- * each with their appropriate class names.
- */
-function createFigure() {
-    // class names
-    const galleryCaption = 'gallery__caption';
-    const galleryCaptionShadow = 'gallery__caption--shadow';
-    const galleryCaptionWhite = 'gallery__caption--white';
-    const galleryFigure = 'gallery__figure';
-    const galleryPhoto = 'gallery__photo';
-
-    // construct the figure!
-
-    const figure = document.createElement('figure');
-    figure.classList.add(galleryFigure);
-
-    // create the img element
-    const image = document.createElement('img');
-    image.classList.add(galleryPhoto);
-    
-    // create the figcaption element
-    const figcaption = document.createElement('figcaption');
-    figcaption.classList.add(galleryCaption, galleryCaptionShadow, galleryCaptionWhite);
-
-    // attach the img and figcaption to the figure
-    figure.appendChild(image);
-    figure.appendChild(figcaption);``
-
-    // Done!
-    return figure;
+    gallery.appendChild(figure);
 }

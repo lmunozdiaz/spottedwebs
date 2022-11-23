@@ -26,6 +26,10 @@ body {
 }
 
 /* Gallery Block */
+.gallery--black-bg {
+    background-color: rgb(15, 15, 15);
+}
+
 .gallery__figure {
     position: relative;
 }
@@ -35,11 +39,11 @@ body {
 }
 
 .gallery__caption {
-    bottom: 16px;
+    bottom: 2vw;
     font-family: 'Starting Live';
     font-size: 1.6rem;
     position: absolute;
-    right: 20px;
+    right: 2vw;
 }
 
 .gallery__caption--white {
