@@ -7,8 +7,7 @@ const galleryPhoto = 'gallery__photo';
 export default function makeFigure() {
     const figure = document.createElement('figure');
     figure.classList.add(galleryFigure);
-    if (window.innerWidth < 768)
-        figure.setAttribute('data-aos', 'fade-up');
+    figure.setAttribute('data-aos', 'fade-up');
 
     const image = document.createElement('img');
     image.classList.add(galleryPhoto);
