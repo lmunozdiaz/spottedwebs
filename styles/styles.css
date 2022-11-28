@@ -11,32 +11,77 @@
     padding: 0;
 }
 
+/* Typography */
 html {
     font-size: 62.5%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
-    font-size: 0px;
-    /* To remove the gaps between img elements */
+    background-image: url(../images/background.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    color: white;
 }
 
-/* Container Block */
+h1,
+h2,
+h3 {
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 7rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+@media (width < 1024px) {
+    body {
+        font-size: 1.8rem;
+    }
+
+    h1 {
+        font-size: 8rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+    }
+}
+
+/* Container */
 .container {
     margin: 0 auto;
     max-width: 1140px;
 }
 
-/* Hero Block */
+/* Hero */
 .hero__image {
     width: 100%;
 }
 
-/* Gallery Block */
-.gallery--black-bg {
+/* Sub-hero */
+.sub-hero--black {
     background-color: rgb(15, 15, 15);
 }
 
+/* Gallery */
 .gallery__figure {
     position: relative;
 }
@@ -61,16 +106,13 @@ body {
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Tablets */
-@media (width > 500px) {
-    .gallery__caption {
-        font-size: 2.6rem;
+@media (width > 1024px) {
+    .grid-col-2 {
+        columns: 2;
     }
-}
 
-/* Desktop */
-@media (width > 900px) {
     .gallery__caption {
-        font-size: 3.2rem;
+        bottom: 2vh;
+        right: 2vh;
     }
 }
