@@ -121,24 +121,22 @@ a {
     white-space: nowrap;
 }
 
-.btn--outline {
-    border: 6px solid var(--color-white);
-}
-
 .btn--spidey {
     background: var(--color-spidey-red);
     color: var(--color-white);
+    border: 6px solid var(--color-white);
 }
 
 .btn--spidey:hover {
     background: var(--color-white);
     color: var(--color-black);
-    outline: 6px solid var(--color-white);
+    border: 6px solid var(--color-white);
 }
 
 .btn--miles {
     background: var(--color-miles-navy);
     color: var(--color-white);
+    border: 6px solid var(--color-white);
 }
 
 .btn--miles:hover {
@@ -150,6 +148,7 @@ a {
 .btn--symbiote {
     background: var(--color-symbiote-indigo);
     color: var(--color-white);
+    border: 6px solid var(--color-white);
 }
 
 .btn--symbiote:hover {
