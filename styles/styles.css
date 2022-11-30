@@ -122,7 +122,7 @@ a {
 }
 
 .btn--outline {
-    outline: 6px solid var(--color-white);
+    border: 6px solid var(--color-white);
 }
 
 .btn--spidey {
@@ -144,7 +144,7 @@ a {
 .btn--miles:hover {
     background: var(--color-miles-red);
     color: var(--color-white);
-    outline: 6px solid var(--color-miles-red);
+    border: 6px solid var(--color-miles-red);
 }
 
 .btn--symbiote {
@@ -155,7 +155,7 @@ a {
 .btn--symbiote:hover {
     background: var(--color-symbiote-yellow);
     color: var(--color-black);
-    outline: 6px solid var(--color-symbiote-yellow);
+    border: 6px solid var(--color-symbiote-yellow);
 }
 
 /* Container
