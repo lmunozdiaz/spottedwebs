@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'Scrambled Storm';
-    src: url(../fonts/scramble_storm/Scramble\ Storm.otf) format("opentype");
+    src: url(../fonts/scramble_storm/Scramble-Storm.otf) format("opentype");
 }
 
 @font-face {
@@ -54,6 +54,7 @@ body {
     font-family: lato, sans-serif;
     font-size: 2rem;
     line-height: 1.5;
+    letter-spacing: 1px;
 }
 
 h1,
@@ -104,21 +105,38 @@ a {
     padding: 0;
 }
 
+
+/* Flex */
+.flex {
+    display: flex;
+}
+
+.flex--center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex--direction {
+    flex-direction: column;
+}
+
 /* Buttons */
 .btn {
-    border-radius: 50px;
+    border-radius: 100px;
     border: none;
-    box-sizing: content-box;
     cursor: pointer;
     font-family: Poppins, sans-serif;
-    font-size: 3.5rem;
-    margin: 1.3rem 0;
+    font-size: 3rem;
     outline: 0;
     padding: 2rem 4rem;
     text-align: center;
     text-transform: uppercase;
     transition: all 0.2s;
     white-space: nowrap;
+}
+
+.btn:first-of-type {
+    margin: 1rem 0;
 }
 
 .btn--spidey {
@@ -157,41 +175,33 @@ a {
     border: 6px solid var(--color-symbiote-yellow);
 }
 
-/* Container
-.container {
-    margin: 0 auto;
-    max-width: 1140px;
-}
+@media (width > 1024px) {
+    .btn {
+        font-size: 7rem;
+    }
 
-.container--image {
-    background-image: url(../images/default-background.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
+    .btn:first-of-type {
+        margin-right: 6rem;
+    }
+
+    .flex--direction {
+        flex-direction: row;
+    }
+}
 
 /* Blocks */
 .block {
-    box-sizing: content-box;
-    padding: 6rem 2rem;
+    padding: 10rem 2rem;
 }
 
 .block__header {
     text-align: center;
 }
 
-/* Flex */
-.flex {
-    display: flex;
-}
-
-.flex--center {
-    align-items: center;
-    justify-content: center;
-}
-
-.flex--column {
-    flex-direction: column;
+@media (width > 1024px) {
+    .block {
+        padding: 20rem 0;
+    }
 }
 
 /* Hero */
@@ -226,16 +236,15 @@ a {
 /* Collections */
 .collection header {
     margin-bottom: 9rem;
-    position: relative;
 }
 
 .collection header h2 {
-    line-height: 0.8;
+    letter-spacing: 5px;
+    line-height: 0.85;
 }
 
 .collection .collection__title {
-    font-size: 11rem;
-    letter-spacing: 3px;
+    font-size: 9rem;
     word-spacing: 9999rem;
 }
 
@@ -254,10 +263,8 @@ a {
 .collection--spidey .collection__subtitle {
     color: var(--color-white);
     font-family: 'Spider-Man';
-    font-size: 4.5rem;
-    left: calc(50vw - 12.8rem);
-    position: absolute;
-    top: 168px;
+    font-size: 4rem;
+    line-height: 1;
 }
 
 .collection--miles {
@@ -274,10 +281,8 @@ a {
 .collection--miles .collection__subtitle {
     color: var(--color-miles-red);
     font-family: 'Starting Live';
-    font-size: 4rem;
-    left: calc(50vw - 10.4rem);
-    position: absolute;
-    top: 175px;
+    font-size: 3.5rem;
+    line-height: 1;
 }
 
 .collection--symbiote {
@@ -294,8 +299,27 @@ a {
 .collection--symbiote .collection__subtitle {
     color: var(--color-symbiote-yellow);
     font-family: 'Scrambled Storm';
-    font-size: 5.5rem;
-    left: calc(50vw - 9.9rem);
-    position: absolute;
-    top: 155px;
+    font-size: 4.3rem;
+    line-height: 0.8;
+}
+
+@media (width > 1024px) {
+    .collection .collection__title {
+        font-size: 18.1rem;
+        word-spacing: 0;
+    }
+
+    .collection--spidey .collection__subtitle {
+        font-size: 9rem;
+    }
+
+    .collection--miles .collection__subtitle {
+        font-size: 8rem;
+        line-height: 0.9;
+    }
+
+    .collection--symbiote .collection__subtitle {
+        font-size: 10rem;
+        line-height: 0.65;
+    }
 }
