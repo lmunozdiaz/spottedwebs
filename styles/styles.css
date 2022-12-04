@@ -237,7 +237,7 @@ a {
 }
 
 /* Collections */
-.collection header {
+.collection .header {
     margin-bottom: 4rem;
 }
 
@@ -300,13 +300,13 @@ a {
 }
 
 @media (width > 786px) {
-    .collection header {
+    .collection .header {
         margin-bottom: 3rem;
     }
 }
 
 @media (width > 1024px) {
-    .collection header {
+    .collection .header {
         margin-bottom: 7rem;
     }
     
