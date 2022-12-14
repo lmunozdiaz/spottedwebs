@@ -132,9 +132,9 @@ a {
     border: 6px solid var(--color-white);
     cursor: pointer;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 4.5rem;
+    font-size: 4rem;
     outline: 0;
-    padding: 1.8rem 6.5rem;
+    padding: 1.8rem 5.5rem;
     text-align: center;
     text-transform: uppercase;
     transition: all 0.2s;
@@ -178,19 +178,25 @@ a {
     border: 6px solid var(--color-symbiote-yellow);
 }
 
-@media (width > 786px) {
+@media screen and (min-width: 786px) {
     .flex--direction {
         flex-direction: row;
+    }
+
+    .btn {
+        font-size: 5rem;
     }
 
     .btn:first-of-type {
         margin-right: 2rem;
     }
-} 
+}
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
     .btn {
+        border: 8px solid var(--color-white);
         font-size: 7rem;
+        padding: 1.8rem 7.5rem;
     }
 
     .btn:first-of-type {
@@ -207,7 +213,7 @@ a {
     text-align: center;
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
     .block {
         padding: 20rem 0;
     }
@@ -236,7 +242,7 @@ a {
     opacity: var(--opacity-low);
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
     .hero__camera-overlay {
         padding: 20px;
     }
@@ -254,7 +260,7 @@ a {
 }
 
 .collection .collection__subtitle--shadow {
-   text-shadow: 3px 3px 0 black; 
+    text-shadow: 3px 3px 0 black;
 }
 
 .collection--spidey {
@@ -311,17 +317,17 @@ a {
     line-height: 0.5;
 }
 
-@media (width > 786px) {
+@media screen and (min-width: 768px) {
     .collection .header {
         margin-bottom: 3rem;
     }
 }
 
-@media (width > 1024px) {
+@media screen and (min-width: 1024px) {
     .collection .header {
         margin-bottom: 7rem;
     }
-    
+
     .collection .collection__title {
         font-size: 18.1rem;
         word-spacing: 0;
