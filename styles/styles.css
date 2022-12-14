@@ -366,7 +366,7 @@ a {
 }
 
 /* Footer */
-.footer header {
+.footer .footer__header {
     margin-bottom: 4.8rem;
 }
 
