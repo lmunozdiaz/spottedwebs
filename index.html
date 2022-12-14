@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpottedWebs</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 
@@ -22,7 +22,7 @@
     <section class="block collection collection--spidey">
         <header class="block__header header">
             <h2 class="collection__title" data-aos="fade-up">spider collection</h2>
-            <p class="collection__subtitle collection__subtitle--shadow" data-aos="zoom-in-up">with great power</p>
+            <p class="collection__subtitle collection__subtitle" data-aos="zoom-in-up">with great power</p>
         </header>
         <div class="flex flex--direction flex--center">
             <button class="btn btn--spidey" data-aos="fade-right">photos</button>
@@ -32,7 +32,7 @@
     <section class="block collection collection--miles">
         <header class="block__header header">
             <h2 class="collection__title" data-aos="fade-up">miles collection</h2>
-            <p class="collection__subtitle collection__subtitle--shadow" data-aos="zoom-in-up">Promise to Protect</p>
+            <p class="collection__subtitle collection__subtitle" data-aos="zoom-in-up">Promise to Protect</p>
         </header>
         <div class="flex flex--direction flex--center">
             <button class="btn btn--miles" data-aos="fade-right">photos</button>
@@ -42,30 +42,87 @@
     <section class="block collection collection--symbiote">
         <header class="block__header header">
             <h2 class="collection__title" data-aos="fade-up">symbiote collection</h2>
-            <p class="collection__subtitle collection__subtitle--shadow" data-aos="zoom-in-up">Gonny Cry?</p>
+            <p class="collection__subtitle collection__subtitle" data-aos="zoom-in-up">Gonny Cry?</p>
         </header>
         <div class="flex flex--direction flex--center">
             <button class="btn btn--symbiote" data-aos="fade-right">photos</button>
             <button class="btn btn--symbiote" data-aos="fade-left">albums</button>
         </div>
     </section>
-    <footer class="block--small block--dark footer">
-        <div class="block__header footer__header">
-            <h2 class="footer__title footer__title--white">spottedwebs</h2>
-            <p class="footer__subtitle footer__subtitle--gray">A Spider-Man photo gallery.</p>
+    <footer class="footer">
+        <div class="grid block--landscape footer__sections">
+            <div class="footer__section footer__branding">
+                <h2>spottedwebs</h2>
+                <p>A Spider-Man photo gallery.</p>
+            </div>
+            <section class="collapsable collapsable--expanded footer__section">
+                <h2 class="footer__heading">attribution</h2>
+                <div class="collapsable__content">
+                    <ul class="list">
+                        <li class="footer__item">
+                            <a href="#">Website Hosting</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#">Free Automated Wordpress</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#">Wordpress</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#">Migrations</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="collapsable footer__section">
+                <h2 class="footer__heading">projects</h2>
+                <div class="collapsable__content">
+                    <ul class="list">
+                        <li>
+                            <a href="#">Website Hosting</a>
+                        </li>
+                        <li>
+                            <a href="#">Free Automated Wordpress</a>
+                        </li>
+                        <li>
+                            <a href="#">Wordpress</a>
+                        </li>
+                        <li>
+                            <a href="#">Migrations</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="collapsable footer__section">
+                <h2 class="footer__heading">contact me</h2>
+                <div class="collapsable__content">
+                    <ul class="list">
+                        <li>
+                            <a href="#">Website Hosting</a>
+                        </li>
+                        <li>
+                            <a href="#">Free Automated Wordpress</a>
+                        </li>
+                        <li>
+                            <a href="#">Wordpress</a>
+                        </li>
+                        <li>
+                            <a href="#">Migrations</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </div>
-        <ul class="list list--white">
-            <li>attribution</li>
-            <li>projects</li>
-            <li>contact me</li>
-        </ul>
-        <p class="copyright">© 2022 Fake Copyright Inc.</p>
+        <div class="footer__section footer__copyright">
+            <p>© 2022 Fake Copyright Inc.</p>
+        </div>
     </footer>
     <!-- <script type="module" src="./scripts/index.js"></script> -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+    <script src="./scripts/collapsables.js"></script>
 </body>
 
 </html>
