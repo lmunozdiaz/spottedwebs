@@ -69,7 +69,6 @@ h4,
 h5,
 h6 {
     font-family: 'Spider-Man';
-    line-height: 0.8;
 }
 
 h1 {
@@ -106,20 +105,6 @@ a {
     color: var(--color-light-gray);
 }
 
-/* Lists */
-.list {
-    list-style: none;
-    padding: 0;
-}
-
-.list li {
-    padding: 0.3rem;
-}
-
-.list li:hover {
-    text-decoration: underline;
-}
-
 /* Flex */
 .flex {
     display: flex;
@@ -141,11 +126,7 @@ a {
 
 /* Blocks */
 .block {
-    padding: 10rem 2rem;
-}
-
-.block--landscape {
-    padding: 5.7rem 7rem;
+    padding: 10rem 0;
 }
 
 .block__header {
@@ -155,6 +136,20 @@ a {
 /* Grid */
 .grid {
     display: grid;
+}
+
+/* Lists */
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.list li {
+    padding: 0.3rem;
+}
+
+.list li:hover {
+    text-decoration: underline;
 }
 
 /* Buttons */
@@ -289,8 +284,9 @@ a {
 
 .collection .collection__title {
     font-size: 9rem;
-    word-spacing: 9999rem;
+    line-height: 0.8;
     text-transform: uppercase;
+    word-spacing: 9999rem;
 }
 
 .collection .collection__subtitle {
@@ -382,85 +378,89 @@ a {
 /* Footer */
 .footer {
     background: var(--color-black);
-    height: 100%;
+}
+
+.footer__brand {
+    margin-bottom: 7rem;
+}
+
+.footer__sitemap {
+    padding: 5rem;
     text-align: center;
-    width: 100%;
 }
 
-.footer__branding {
-    margin-bottom: 8rem;
-}
-
-.footer__branding h2 {
-    color: var(--color-white);
-    font-size: 6rem;
-}
-
-.footer__branding p {
-    font-size: 2.6rem;
-    margin-top: 0px;
-}
-
-.footer__sections .collapsable {
-    border-top: 1px solid var(--color-dark-gray);
+.footer .collapsable {
     padding: 2.4rem 0;
 }
 
-.footer__heading {
-    color: var(--color-light-gray);
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem;
-    letter-spacing: normal;
-    transition: all 0.2s;
-    cursor: default;
+.footer .collapsable:nth-child(even) {
+    border-bottom: 1px solid var(--color-dark-gray);
+    border-top: 1px solid var(--color-dark-gray);
 }
 
-.footer__heading:hover {
+.footer__title {
+    color: var(--color-light-gray);
+    cursor: default;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    transition: all 0.2s;
+}
+
+.footer__title:hover {
     color: var(--color-white);
 }
 
-.collapsable--expanded .footer__heading {
+.footer .collapsable--expanded .footer__title {
     margin-bottom: 2rem;
 }
 
-.footer__copyright {
-    margin: 0 0 3.4rem 0;
-    font-size: 1.6rem;
-    cursor: default;
+.footer__logo {
+    color: var(--color-white);
+    font-size: 6rem;
+    margin-bottom: -20px;
 }
 
-.footer__copyright:hover {
-    text-decoration: underline;
+.footer__copyright {
+    font-size: 1.6rem;
+    margin-top: 5rem;
+    text-align: center;
 }
 
 @media screen and (min-width: 768px) {
     .footer {
+        font-size: 1.4rem;
+    }
+
+    .footer__sitemap {
+        grid-template-areas: "brand heading heading heading" "copyright copyright copyright copyright";
+        grid-template-columns: 1.5fr repeat(3, 1fr);
+        justify-items: center;
+        padding: 5rem 7rem;
         text-align: left;
     }
 
-    .footer__sections {
-        grid-template-columns: repeat(4, 1fr);
+    .footer__brand {
+        grid-area: brand;
+        justify-self: flex-start;
+        margin-bottom: 0;
     }
 
-    .footer__branding h2 {
-        font-size: 5rem;
-    }
-
-    .footer__branding p {
-        font-size: 1.6rem;
-    }
-
-    .footer__sections .collapsable {
-        border-top: none;
+    .footer .collapsable {
         padding: 0;
     }
 
-    .footer__heading {
-        font-size: 2.6rem;
+    .footer .collapsable:nth-child(even) {
+        border: none;
     }
 
-    .footer__item {
-        font-size: 1.4rem;
+    .footer__title {
+        color: var(--color-white);
+        cursor: text;
+        font-size: 2rem;
+    }
+    
+    .footer .collapsable .footer__title {
+        margin-bottom: 1rem;
     }
 
     .footer .collapsable__content {
@@ -468,8 +468,30 @@ a {
         opacity: 1;
     }
 
+    .footer__logo {
+        font-size: 5rem;
+        margin-bottom: -16px;
+    }
+
     .footer__copyright {
-        text-align: center;
+        font-size: 1.2rem;
+        grid-area: copyright;
+        justify-self: center;
+    }
+
+    .footer__copyright::before {
+        border-top: 0.5px solid var(--color-dark-gray);
+        content: '';
+        display: inline-block;
+        margin-bottom: 1rem;
+        width: 88vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .footer__sitemap {
+        grid-template-columns: 2fr repeat(3, 1fr);
+        padding: 6rem 10rem;
     }
 }
 
