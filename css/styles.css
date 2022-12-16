@@ -59,7 +59,7 @@ html {
 body {
     color: var(--color-light-gray);
     font-family: lato, sans-serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 h1,
@@ -402,7 +402,7 @@ a {
     color: var(--color-light-gray);
     cursor: default;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
     transition: all 0.2s;
 }
 
@@ -421,7 +421,7 @@ a {
 }
 
 .footer__copyright {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-top: 5rem;
     text-align: center;
 }
