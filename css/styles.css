@@ -68,7 +68,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Spider-Man';
+    font-family: 'Spider-Man', sans-serif;
 }
 
 h1 {
@@ -306,7 +306,7 @@ a {
 
 .collection--spidey .collection__subtitle {
     color: var(--color-spidey-yellow);
-    font-family: 'Amazing Spider-Man';
+    font-family: 'Amazing Spider-Man', sans-serif;
     font-size: 3.5rem;
     text-transform: uppercase;
 }
@@ -324,7 +324,7 @@ a {
 
 .collection--miles .collection__subtitle {
     color: var(--color-miles-red);
-    font-family: 'Starting Live';
+    font-family: 'Starting Live', sans-serif;
     font-size: 3.6rem;
 }
 
@@ -432,7 +432,9 @@ a {
     }
 
     .footer__sitemap {
-        grid-template-areas: "brand heading heading heading" "copyright copyright copyright copyright";
+        grid-template-areas:
+            "brand heading heading heading"
+            "copyright copyright copyright copyright";
         grid-template-columns: 1.5fr repeat(3, 1fr);
         justify-items: center;
         padding: 5rem 7rem;
@@ -458,7 +460,7 @@ a {
         cursor: text;
         font-size: 2rem;
     }
-    
+
     .footer .collapsable .footer__title {
         margin-bottom: 1rem;
     }
