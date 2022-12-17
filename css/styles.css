@@ -95,10 +95,6 @@ h6 {
     font-size: 1rem;
 }
 
-p {
-    margin-top: 1rem;
-}
-
 /* Links */
 a {
     text-decoration: none;
@@ -133,6 +129,12 @@ a {
     text-align: center;
 }
 
+@media screen and (min-width: 1024px) {
+    .block {
+        padding: 20rem 0;
+    }
+}
+
 /* Grid */
 .grid {
     display: grid;
@@ -153,52 +155,52 @@ a {
 }
 
 /* Buttons */
-.btn {
+.button {
     border-radius: 100px;
     border: 6px solid var(--color-white);
     cursor: pointer;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 4rem;
     outline: 0;
-    padding: 1.8rem 5.5rem;
+    padding: 1.8rem 6rem;
     text-align: center;
     text-transform: uppercase;
     transition: all 0.2s;
     white-space: nowrap;
 }
 
-.btn:first-of-type {
-    margin: 1.5rem 0;
+.button:first-of-type {
+    margin: 0 0 1.5rem 0;
 }
 
-.btn--spidey {
+.button--spidey {
     background: var(--color-spidey-red);
     color: var(--color-white);
 }
 
-.btn--spidey:hover {
+.button--spidey:hover {
     background: var(--color-white);
     color: var(--color-black);
     border: 6px solid var(--color-white);
 }
 
-.btn--miles {
+.button--miles {
     background: var(--color-miles-navy);
     color: var(--color-white);
 }
 
-.btn--miles:hover {
+.button--miles:hover {
     background: var(--color-miles-red);
     color: var(--color-white);
     border: 6px solid var(--color-miles-red);
 }
 
-.btn--symbiote {
+.button--symbiote {
     background: var(--color-symbiote-indigo);
     color: var(--color-white);
 }
 
-.btn--symbiote:hover {
+.button--symbiote:hover {
     background: var(--color-symbiote-yellow);
     color: var(--color-black);
     border: 6px solid var(--color-symbiote-yellow);
@@ -209,42 +211,14 @@ a {
         flex-direction: row;
     }
 
-    .btn {
-        font-size: 5rem;
-    }
-
-    .btn:first-of-type {
-        margin-right: 2rem;
+    .button:first-of-type {
+        margin: 0 2rem 0 0;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .btn {
-        border: 8px solid var(--color-white);
-        font-size: 7rem;
-        padding: 1.8rem 7.5rem;
-    }
-
-    .btn:first-of-type {
-        margin-right: 4rem;
-    }
-
-    .btn--spidey:hover {
-        border: 8px solid var(--color-white);
-    }
-
-    .btn--miles:hover {
-        border: 8px solid var(--color-miles-red);
-    }
-
-    .btn--symbiote:hover {
-        border: 8px solid var(--color-symbiote-yellow);
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .block {
-        padding: 20rem 0;
+    .button:first-of-type {
+        margin: 0 4rem 0 0;
     }
 }
 
@@ -284,9 +258,8 @@ a {
 
 .collection .collection__title {
     font-size: 9rem;
-    line-height: 0.8;
     text-transform: uppercase;
-    word-spacing: 9999rem;
+    /* word-spacing: 9999rem; */
 }
 
 .collection .collection__subtitle {
@@ -341,29 +314,18 @@ a {
 
 .collection--symbiote .collection__subtitle {
     color: var(--color-symbiote-yellow);
-    font-family: Cynatar;
+    font-family: Cynatar, sans-serif;
     font-size: 4.5rem;
-    line-height: 0.5;
-}
-
-@media screen and (min-width: 768px) {
-    .collection .header {
-        margin-bottom: 3rem;
-    }
 }
 
 @media screen and (min-width: 1024px) {
-    .collection .header {
-        margin-bottom: 7rem;
-    }
-
     .collection .collection__title {
-        font-size: 18.1rem;
+        font-size: 18rem;
         word-spacing: 0;
     }
 
     .collection--spidey .collection__subtitle {
-        font-size: 9rem;
+        font-size: 7rem;
     }
 
     .collection--miles .collection__subtitle {
@@ -380,13 +342,22 @@ a {
     background: var(--color-black);
 }
 
+.footer__sitemap {
+    padding: 5rem;
+    text-align: center;
+}
+
 .footer__brand {
     margin-bottom: 7rem;
 }
 
-.footer__sitemap {
-    padding: 5rem;
-    text-align: center;
+.footer__logo {
+    color: var(--color-white);
+    font-size: 6rem;
+}
+
+.footer__statement {
+    margin-top: -0.7rem;
 }
 
 .footer .collapsable {
@@ -398,7 +369,7 @@ a {
     border-top: 1px solid var(--color-dark-gray);
 }
 
-.footer__title {
+.footer__heading {
     color: var(--color-light-gray);
     cursor: default;
     font-family: 'Bebas Neue', sans-serif;
@@ -406,18 +377,12 @@ a {
     transition: all 0.2s;
 }
 
-.footer__title:hover {
+.footer__heading:hover {
     color: var(--color-white);
 }
 
-.footer .collapsable--expanded .footer__title {
-    margin-bottom: 2rem;
-}
-
-.footer__logo {
-    color: var(--color-white);
-    font-size: 6rem;
-    margin-bottom: -20px;
+.footer .collapsable--expanded .footer__heading {
+    margin-bottom: 1rem;
 }
 
 .footer__copyright {
@@ -428,7 +393,7 @@ a {
 
 @media screen and (min-width: 768px) {
     .footer {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
     .footer__sitemap {
@@ -436,7 +401,7 @@ a {
             "brand heading heading heading"
             "copyright copyright copyright copyright";
         grid-template-columns: 1.5fr repeat(3, 1fr);
-        justify-items: center;
+        justify-items: left;
         padding: 5rem 7rem;
         text-align: left;
     }
@@ -447,6 +412,10 @@ a {
         margin-bottom: 0;
     }
 
+    .footer__logo {
+        font-size: 5rem;
+    }
+
     .footer .collapsable {
         padding: 0;
     }
@@ -455,24 +424,19 @@ a {
         border: none;
     }
 
-    .footer__title {
+    .footer__heading {
         color: var(--color-white);
         cursor: text;
         font-size: 2rem;
     }
 
-    .footer .collapsable .footer__title {
+    .footer .collapsable .footer__heading {
         margin-bottom: 1rem;
     }
 
     .footer .collapsable__content {
         max-height: 100%;
         opacity: 1;
-    }
-
-    .footer__logo {
-        font-size: 5rem;
-        margin-bottom: -16px;
     }
 
     .footer__copyright {
@@ -486,7 +450,7 @@ a {
         content: '';
         display: inline-block;
         margin-bottom: 1rem;
-        width: 88vw;
+        width: 87vw;
     }
 }
 
