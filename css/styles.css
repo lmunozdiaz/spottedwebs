@@ -69,6 +69,7 @@ h4,
 h5,
 h6 {
     font-family: 'Spider-Man', sans-serif;
+    line-height: 0.82;
 }
 
 h1 {
@@ -93,6 +94,10 @@ h5 {
 
 h6 {
     font-size: 1rem;
+}
+
+p {
+    line-height: normal;
 }
 
 /* Links */
@@ -122,7 +127,7 @@ a {
 
 /* Blocks */
 .block {
-    padding: 10rem 0;
+    padding: 10rem 2rem;
 }
 
 .block__header {
@@ -160,9 +165,9 @@ a {
     border: 6px solid var(--color-white);
     cursor: pointer;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem;
+    font-size: 3.2rem;
     outline: 0;
-    padding: 1.8rem 6rem;
+    padding: 1.4rem 5rem;
     text-align: center;
     text-transform: uppercase;
     transition: all 0.2s;
@@ -211,6 +216,11 @@ a {
         flex-direction: row;
     }
 
+    .button {
+        font-size: 4rem;
+        padding: 1.8rem 6rem;
+    }
+
     .button:first-of-type {
         margin: 0 2rem 0 0;
     }
@@ -252,17 +262,16 @@ a {
 }
 
 /* Collections */
-.collection .header {
+.collection__header {
     margin-bottom: 4rem;
 }
 
-.collection .collection__title {
+.collection__heading {
     font-size: 9rem;
     text-transform: uppercase;
-    /* word-spacing: 9999rem; */
 }
 
-.collection .collection__subtitle {
+.collection__statement {
     text-shadow: 3px 3px 0 black;
 }
 
@@ -273,11 +282,11 @@ a {
     background-size: cover;
 }
 
-.collection--spidey .collection__title {
+.collection--spidey .collection__heading {
     color: var(--color-white);
 }
 
-.collection--spidey .collection__subtitle {
+.collection--spidey .collection__statement {
     color: var(--color-spidey-yellow);
     font-family: 'Amazing Spider-Man', sans-serif;
     font-size: 3.5rem;
@@ -291,11 +300,11 @@ a {
     background-size: cover;
 }
 
-.collection--miles .collection__title {
+.collection--miles .collection__heading {
     color: var(--color-white);
 }
 
-.collection--miles .collection__subtitle {
+.collection--miles .collection__statement {
     color: var(--color-miles-red);
     font-family: 'Starting Live', sans-serif;
     font-size: 3.6rem;
@@ -308,31 +317,31 @@ a {
     background-size: cover;
 }
 
-.collection--symbiote .collection__title {
+.collection--symbiote .collection__heading {
     color: var(--color-white);
 }
 
-.collection--symbiote .collection__subtitle {
+.collection--symbiote .collection__statement {
     color: var(--color-symbiote-yellow);
     font-family: Cynatar, sans-serif;
     font-size: 4.5rem;
 }
 
 @media screen and (min-width: 1024px) {
-    .collection .collection__title {
+    .collection .collection__heading {
         font-size: 18rem;
         word-spacing: 0;
     }
 
-    .collection--spidey .collection__subtitle {
+    .collection--spidey .collection__statement {
         font-size: 7rem;
     }
 
-    .collection--miles .collection__subtitle {
+    .collection--miles .collection__statement {
         font-size: 8rem;
     }
 
-    .collection--symbiote .collection__subtitle {
+    .collection--symbiote .collection__statement {
         font-size: 10rem;
     }
 }
@@ -354,10 +363,6 @@ a {
 .footer__logo {
     color: var(--color-white);
     font-size: 6rem;
-}
-
-.footer__statement {
-    margin-top: -0.7rem;
 }
 
 .footer .collapsable {
@@ -397,10 +402,11 @@ a {
     }
 
     .footer__sitemap {
+        gap: 0.5rem;
         grid-template-areas:
             "brand heading heading heading"
             "copyright copyright copyright copyright";
-        grid-template-columns: 1.5fr repeat(3, 1fr);
+        grid-template-columns: 2fr repeat(3, 1fr);
         justify-items: left;
         padding: 5rem 7rem;
         text-align: left;
@@ -456,7 +462,7 @@ a {
 
 @media screen and (min-width: 1024px) {
     .footer__sitemap {
-        grid-template-columns: 2fr repeat(3, 1fr);
+        grid-template-columns: 4fr repeat(3, 1fr);
         padding: 6rem 10rem;
     }
 }
