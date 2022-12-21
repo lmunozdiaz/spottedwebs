@@ -5,53 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpottedWebs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600&family=Bebas+Neue&family=Lato:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 
 <body>
-    <!-- <div class="hero">
-        <picture>
-            <source srcset="">
-            <source srcset="">
-            <img src="./images/hero-banner.webp" alt="a symbiote spider-man hero banner" class="hero__image">
-        </picture>
-    </div> -->
-    <section class="block collection collection--spidey">
-        <header class="block__header collection__header">
-            <h2 class="collection__heading" data-aos="fade-up">spider collection</h2>
-            <p class="collection__statement" data-aos="zoom-in-up">with great power</p>
+    <section class="flex collection collection--spider">
+        <header class="collection__header">
+            <h2 class="collection__heading" data-aos="fade-up">Spider Collection</h2>
+            <p class="collection__statement" data-aos="zoom-in-up">With Great Power</p>
         </header>
-        <div class="flex flex--direction flex--center buttons">
-            <button class="button button--spidey" data-aos="fade-right">photos</button>
-            <button class="button button--spidey" data-aos="fade-left">albums</button>
-        </div>
+        <div class="flex buttons collection__buttons">
+            <button class="button button--secondary button--spider" data-aos="fade-right">photos</button>
+            <button class="button button--secondary button--spider" data-aos="fade-left">albums</button>
+        </div class="collection__buttons">
     </section>
-    <section class="block collection collection--miles">
-        <header class="block__header collection__header">
-            <h2 class="collection__heading" data-aos="fade-up">miles collection</h2>
-            <p class="collection__statement" data-aos="zoom-in-up">Promise to Protect</p>
+    <section class="flex collection collection--miles">
+        <header class="collection__header">
+            <h2 class="collection__heading" data-aos="fade-up">Miles Collection</h2>
+            <p class="collection__statement" data-aos="zoom-in-up">Promise To Protect</p>
         </header>
-        <div class="flex flex--direction flex--center buttons">
-            <button class="button button--miles" data-aos="fade-right">photos</button>
-            <button class="button button--miles" data-aos="fade-left">albums</button>
-        </div>
+        <div class="flex buttons collection__buttons">
+            <button class="button button--secondary button--miles" data-aos="fade-right">photos</button>
+            <button class="button button--secondary button--miles" data-aos="fade-left">albums</button>
+        </div class="collection__buttons">
     </section>
-    <section class="block collection collection--symbiote">
-        <header class="block__header collection__header">
-            <h2 class="collection__heading" data-aos="fade-up">symbiote collection</h2>
+    <section class="flex collection collection--symbiote">
+        <header class="collection__header">
+            <h2 class="collection__heading" data-aos="fade-up">Symbiote Collection</h2>
             <p class="collection__statement" data-aos="zoom-in-up">Gonna Cry?</p>
         </header>
-        <div class="flex flex--direction flex--center buttons">
-            <button class="button button--symbiote" data-aos="fade-right">photos</button>
-            <button class="button button--symbiote" data-aos="fade-left">albums</button>
-        </div>
+        <div class="flex buttons collection__buttons">
+            <button class="button button--secondary button--symbiote" data-aos="fade-right">photos</button>
+            <button class="button button--secondary button--symbiote" data-aos="fade-left">albums</button>
+        </div class="collection__buttons">
     </section>
     <footer class="footer">
         <div class="grid footer__sitemap">
             <div class="footer__brand">
-                <h2 class="footer__logo">spottedwebs</h2>
+                <h2 class="footer__logo">SpottedWebs</h2>
                 <p class="footer__statement">Capturing Spidey's best angles.</p>
             </div>
             <section class="collapsable footer__section">
@@ -110,7 +110,6 @@
             </div>
         </div>
     </footer>
-    <!-- <script type="module" src="./scripts/index.js"></script> -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
