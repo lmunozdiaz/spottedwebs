@@ -166,6 +166,7 @@ a {
 
 .button--spider:hover {
     background: var(--color-white);
+    /* border: 4.6px solid var(--color-spidey-yellow); */
     color: var(--color-black);
 }
 
@@ -176,8 +177,8 @@ a {
 
 .button--miles:hover {
     background: var(--color-miles-red);
-    color: var(--color-white);
     border: 4.6px solid var(--color-miles-red);
+    color: var(--color-white);
 }
 
 .button--symbiote {
@@ -187,8 +188,8 @@ a {
 
 .button--symbiote:hover {
     background: var(--color-symbiote-yellow);
-    color: var(--color-black);
     border: 4.6px solid var(--color-symbiote-yellow);
+    color: var(--color-black);
 }
 
 @media screen and (min-width: 786px) {
