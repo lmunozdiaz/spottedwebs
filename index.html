@@ -7,17 +7,27 @@
     <title>SpottedWebs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600&family=Bebas+Neue&family=Lato:wght@300&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 
 <body>
+    <nav class="nav collapsable">
+        <ul class="nav__list collapsable__content">
+            <li class="nav__item"><a href="#">Explore</a></li>
+            <li class="nav__item"><a href="#">Collections</a></li>
+            <li class="nav__item"><a href="#">New</a></li>
+        </ul>
+        <h1 class="nav__logo">SpottedWebs</h1>
+        <div class="nav__buttons collapsable__content">
+            <a href="https://github.com/louismunozdiaz?tab=repositories" class="button button--primary">GitHub</a>
+            <a href="https://www.linkedin.com/in/louismunozdiaz/" class="button button--primary">LinkedIn</a>
+        </div>
+        <span class="material-icons nav__toggler">menu</span>
+    </nav>
     <section class="flex collection collection--spider">
         <header class="collection__header">
             <h2 class="collection__heading" data-aos="fade-up">Spider Collection</h2>
@@ -57,14 +67,14 @@
             <section class="collapsable footer__section">
                 <h2 class="footer__heading">attribution</h2>
                 <div class="collapsable__content">
-                    <ul class="list">
-                        <li>
+                    <ul class="list footer__list">
+                        <li class="footer_item">
                             <a href="#">Fonts</a>
                         </li>
-                        <li>
+                        <li class="footer_item">
                             <a href="#">Images</a>
                         </li>
-                        <li>
+                        <li class="footer_item">
                             <a href="#">Insomniac</a>
                         </li>
                     </ul>
@@ -73,17 +83,17 @@
             <section class="collapsable footer__section">
                 <h2 class="footer__heading">projects</h2>
                 <div class="collapsable__content">
-                    <ul class="list">
-                        <li>
+                    <ul class="list footer__list">
+                        <li class="footer_item">
                             <a href="#">SpottedWebs</a>
                         </li>
-                        <li>
+                        <li class="footer_item">
                             <a href="#">Veydosebrom Regions</a>
                         </li>
-                        <li>
+                        <li class="footer_item">
                             <a href="#">Tomebound</a>
                         </li>
-                        <li>
+                        <li class="footer_item">
                             <a href="#">NexusMods Collections</a>
                         </li>
                     </ul>
@@ -92,14 +102,14 @@
             <section class="collapsable footer__section">
                 <h2 class="footer__heading">contact me</h2>
                 <div class="collapsable__content">
-                    <ul class="list">
-                        <li>
+                    <ul class="list footer__list">
+                        <li class="footer_item">
                             <a href="#">LinkedIn</a>
                         </li>
-                        <li>
+                        <li class="footer_item">
                             <a href="#">GitHub</a>
                         </li>
-                        <li>
+                        <li class="footer_item">
                             <a href="#">NexusMods</a>
                         </li>
                     </ul>
