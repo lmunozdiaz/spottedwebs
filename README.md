@@ -1,2 +1,2 @@
 # SpottedWebs
-A simple, static website gallery to showcase my photos taken within Marvel's Spider-Man.
+A simple, static website to showcase the photos I've taken within the video game Marvel's Spider-Man. W.I.P.
