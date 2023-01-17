@@ -1,22 +1,53 @@
-const galleryCaption = 'gallery__caption';
-const galleryCaptionShadow = 'gallery__caption--shadow';
-const galleryCaptionWhite = 'gallery__caption--white';
-const galleryFigure = 'gallery__figure';
-const galleryPhoto = 'gallery__photo';
+const cardClass = 'card';
+const cardImageClass = 'card__image';
+const cardDetailsClass = 'card__details';
+const cardHeaderClass = 'card__header';
+const cardTitleClass = 'card__title';
+const cardSubtitleClass = 'card__subtitle';
+const cardMetadataClass = 'card__metadata';
+const metadataLinkClass = 'metadata__link'
+const metadataLikeClass = 'metadata__like';
+const materialIconClass = 'material-icons';
 
-export default function makeFigure() {
-    const figure = document.createElement('figure');
-    figure.classList.add(galleryFigure);
-    // figure.setAttribute('data-aos', 'fade-up');
+export default function buildImageCard(imageUrl) {
+    const card = document.createElement('div');
+    card.classList.add(cardClass);
 
+    const cardImage = document.createElement('div');
+    cardImage.classList.add(cardImageClass);
     const image = document.createElement('img');
-    image.classList.add(galleryPhoto);
+    image.setAttribute('src', imageUrl);
+    cardImage.appendChild(image);
 
-    const figcaption = document.createElement('figcaption');
-    figcaption.classList.add(galleryCaption, galleryCaptionShadow, galleryCaptionWhite);
+    card.appendChild(cardImage);
 
-    figure.appendChild(image);
-    figure.appendChild(figcaption);
+    const cardDetails = document.createElement('div');
+    cardDetails.classList.add(cardDetailsClass);
 
-    return figure;
+    const cardHeader = document.createElement('header');
+    cardHeader.classList.add(cardHeaderClass);
+    const cardTitle = document.createElement('h3');
+    cardTitle.classList.add(cardTitleClass);
+    const cardSubtitle = document.createElement('p');
+    cardSubtitle.classList.add(cardSubtitleClass);
+    cardHeader.appendChild(cardTitle);
+    cardHeader.appendChild(cardSubtitle);
+
+    cardDetails.appendChild(cardHeader);
+
+    const cardMetadata = document.createElement('section');
+    cardMetadata.classList.add(cardMetadataClass);
+    const metadataLink = document.createElement('span');
+    metadataLink.classList.add(metadataLinkClass);
+    const metadataLike = document.createElement('span');
+    metadataLike.classList.add(materialIconClass)
+    metadataLike.innerHTML = 'thumb_up_off_alt';
+    cardMetadata.appendChild(metadataLink);
+    cardMetadata.appendChild(metadataLike);
+
+    cardDetails.appendChild(cardMetadata);
+
+    card.appendChild(cardDetails);
+
+    return card;
 }

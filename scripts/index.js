@@ -1,18 +1,24 @@
 import photos from './photos.js';
-import makeFigure from './figure.js';
+import buildImageCard from './figure.js';
 
 // get the gallery container from the DOM
 const gallery = document.querySelector('#gallery');
 
 // for each photo create a figure element
 for (let photo of photos) {
-    const figure = makeFigure();
+    const imageCard = buildImageCard();
 
-    const image = figure.querySelector('img');
-    image.setAttribute('src', photo.url);
+    const imageElement = imageCard.querySelector('img');
+    imageElement.setAttribute('src', photo.url);
 
-    const caption = figure.querySelector('figcaption');
-    caption.innerHTML = photo.id;
+    const cardTitle = imageCard.querySelector('.card__title');
+    cardTitle.innerHTML = photo.id;
 
-    gallery.appendChild(figure);
+    const cardSubtitle = imageCard.querySelector('.card__subtitle');
+    cardSubtitle.innerHTML = photo.collection;
+
+    const metadataLink = imageCard.querySelector('.metadata__link');
+    metadataLink.innerHTML = 'Suit Link';
+
+    gallery.appendChild(imageCard);
 }

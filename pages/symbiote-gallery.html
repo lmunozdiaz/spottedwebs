@@ -3,23 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpottedWebs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Symbiote Collection</title>
 </head>
 
 <body>
     <nav class="nav collapsable">
         <ul class="nav__list collapsable__content">
-            <li class="nav__item"><a href="/pages/symbiote-gallery.html">Explore</a></li>
-            <li class="nav__item"><a href="/pages/symbiote-gallery.html">Collections</a></li>
-            <li class="nav__item"><a href="/pages/symbiote-gallery.html">New</a></li>
+            <li class="nav__item"><a href="#">Explore</a></li>
+            <li class="nav__item"><a href="#">Collections</a></li>
+            <li class="nav__item"><a href="#">New</a></li>
         </ul>
         <h1 class="nav__logo"><a href="/index.html">SpottedWebs</a></h1>
         <div class="nav__buttons collapsable__content">
@@ -28,37 +30,7 @@
         </div>
         <span class="material-icons nav__toggler">menu</span>
     </nav>
-    <section class="flex collection collection--spider">
-        <header class="collection__header">
-            <h2 class="collection__heading" data-aos="fade-up">Spider Collection</h2>
-            <p class="collection__statement" data-aos="zoom-in-up">With Great Power</p>
-        </header>
-        <div class="flex buttons collection__buttons">
-            <button class="button button--secondary button--spider" data-aos="fade-right">photos</button>
-            <button class="button button--secondary button--spider" data-aos="fade-left">albums</button>
-        </div>
-    </section>
-    <section class="flex collection collection--miles">
-        <header class="collection__header">
-            <h2 class="collection__heading" data-aos="fade-up">Miles Collection</h2>
-            <p class="collection__statement" data-aos="zoom-in-up">Promise To Protect</p>
-        </header>
-        <div class="flex buttons collection__buttons">
-            <button class="button button--secondary button--miles" data-aos="fade-right">photos</button>
-            <button class="button button--secondary button--miles" data-aos="fade-left">albums</button>
-        </div>
-    </section>
-    <section class="flex collection collection--symbiote">
-        <header class="collection__header">
-            <h2 class="collection__heading" data-aos="fade-up">Symbiote Collection</h2>
-            <p class="collection__statement" data-aos="zoom-in-up">Gonna Cry?</p>
-        </header>
-        <div class="flex buttons collection__buttons">
-            <button href="./pages/symbiote-gallery.html" class="button button--secondary button--symbiote"
-                data-aos="fade-right">photos</button>
-            <button class="button button--secondary button--symbiote" data-aos="fade-left">albums</button>
-        </div>
-    </section>
+    <div id="gallery"></div>
     <footer class="footer">
         <div class="grid footer__sitemap">
             <div class="footer__brand">
@@ -121,11 +93,7 @@
             </div>
         </div>
     </footer>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <script src="./scripts/collapsables.js"></script>
+    <script src="/scripts/index.js" type="module"></script>
 </body>
 
 </html>
